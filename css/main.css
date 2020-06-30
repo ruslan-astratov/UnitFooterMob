@@ -1523,6 +1523,20 @@ form input {
 .footer-nav a:hover {
   color: rgba(255, 255, 255, 0.3);
 }
+
+.footer-nav a::after {
+  content: "";
+  display: block;
+  transform: translateY(1px) scaleX(0);
+  background-color: #ffffff;
+  height: 2px;
+}
+.footer-nav a:hover::after {
+  transform: translateY(1px) scaleX(1);
+  transition: 0.5s;
+}
+
+
 @media (min-width: 768px) {
   .footer-nav a {
     margin-bottom: unset;
